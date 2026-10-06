@@ -2059,3 +2059,62 @@ textarea.form-input::-webkit-resizer { display: none; }
 .clients-title {
   margin-bottom: 20px;
 }
+
+.languages-list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30px;
+  padding: 25px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  overscroll-behavior-inline: contain;
+  scroll-snap-type: inline mandatory;
+}
+
+.languages-item {
+  min-width: max-content;
+  scroll-snap-align: start;
+}
+
+.languages-item a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  color: var(--light-gray);
+  transition: var(--transition-1);
+}
+
+.languages-item a:hover {
+  color: var(--orange-yellow-crayola);
+  transform: translateY(-5px);
+}
+
+.languages-item img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  transition: var(--transition-1);
+}
+
+.languages-item a:hover img {
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.2));
+}
+
+[data-theme="light"] .languages-item a:hover img {
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.2));
+}
+
+.languages-item span {
+  font-size: var(--fs-7);
+  font-weight: var(--fw-500);
+}
+
+.rust-icon {
+  filter: invert(1);
+}
+
+[data-theme="light"] .rust-icon {
+  filter: none;
+}
