@@ -410,7 +410,7 @@ main {
   border: 1px solid var(--jet);
   border-radius: 12px 12px 0 0;
   box-shadow: var(--shadow-2);
-  z-index: 5;
+  z-index: 100;
 }
 
 .navbar-list {
@@ -1460,6 +1460,14 @@ textarea.form-input::-webkit-resizer { display: none; }
     box-shadow: var(--shadow-5);
   }
 
+  /* Crée un espace flottant à droite pour que le texte contourne la navbar sans passer dessous */
+  article::before {
+    content: "";
+    float: right;
+    width: 650px;
+    height: 85px;
+  }
+
 
   main { margin-bottom: 60px; }
 
@@ -1480,6 +1488,7 @@ textarea.form-input::-webkit-resizer { display: none; }
     border-radius: 0 20px;
     padding: 0 20px;
     box-shadow: none;
+    z-index: 100;
   }
 
   .navbar-list {
